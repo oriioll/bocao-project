@@ -1,0 +1,81 @@
+/*
+* IMPORT CUSTOM FONT
+*/
+@font-face {
+  font-family: ChunkFive; 
+  src: url(../assets/fonts/Chunkfive.woff); 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --title-font: ChunkFive, sans-serif;
+    --font-primary: Inter, sans-serif;
+    --bg-red: #F02020;
+    --darker-red: #C01817;
+    --text-white: #F7F0EA;
+    --text-yellow: #FEB101;
+    --text-black: #1B1815;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*LANDING HERO*/
+.firstLandingHero {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-red);
+    font-family: var(--title-font);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.firstLandingHero h1 {
+    color: var(--text-white);
+    font-size: 8rem;
+    letter-spacing: 10px;
+}
+.firstLandingHero h2 {
+    color: var(--text-yellow);
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
+
+.firstLandingHero p {
+    color: var(--text-black);
+    font-family: var(--font-primary);
+    font-weight: 500;
+    margin-top: 20px;
+    animation: parpadeo 1.5s infinite ease;
+}
+/*ANIMACION PARPADEO PARA TEXTO DE CONTINUAR*/
+@keyframes parpadeo {
+    0% {
+        opacity: .6;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: .6;
+        transform: scale(1);
+    }
+}
+
