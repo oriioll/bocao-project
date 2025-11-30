@@ -19,12 +19,13 @@
         <div class="loginFormText">
             <h1>Crea una cuenta</h1>
             <form class="loginForm">
-                <input type="text" placeholder="Nombre de usuario">
-                <input type="text" placeholder="Correo electrónico">
-                <input type="tel" placeholder="Teléfono">
-                <input type="password" placeholder="Contraseña">
-                <input type="password" placeholder="Confirmar contraseña">
-                <button id="loginBtn" class="loginBtn">Continuar</button>
+                <input id="registerUser" type="text" placeholder="Nombre de usuario">
+                <input id="registerEmail" type="text" placeholder="Correo electrónico">
+                <input id="registerTel" type="tel" placeholder="Teléfono">
+                <input id="registerPwd" type="password" placeholder="Contraseña">
+                <input id="registerPwdCheck" type="password" placeholder="Confirmar contraseña">
+                <p class="loginError" id="registerError">Usuario o contraseña incorrecto</p>
+                <button id="registerBtn" class="loginBtn">Continuar</button>
             </form>
             <p>¿Ya tienes cuenta? <a href="../login/index.html">Inicia sesión</a></p>
         </div>

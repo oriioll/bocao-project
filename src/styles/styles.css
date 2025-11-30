@@ -366,6 +366,7 @@ body {
   border-radius: 10px;
   border: solid 2px black;
   outline: none;
+  font-family: var(--font-primary);
   margin-bottom: 10px;
 }
 .loginForm input::placeholder {
@@ -375,6 +376,11 @@ body {
   border: solid 2px var(--text-yellow);
   outline: none;
   font-family: var(--font-primary);
+}
+.loginError {
+  color: var(--bg-red);
+  font-size: .8rem;
+  display: none;
 }
 .loginForm a {
   width: 50%;
