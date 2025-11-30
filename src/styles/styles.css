@@ -246,7 +246,7 @@ body {
     /* aumentar ligeramente el ancho en pantallas medianas para que no quede demasiado estrecho */
     width: 48%;
     height: 68%;
-    gap: 72px;
+    gap: 22px;
     padding-bottom: 60px;
     /* centrar el article en pantallas intermedias para que no quede pegado al lado */
     left: 50%;
@@ -270,7 +270,7 @@ body {
     /* mantener el artículo razonablemente ancho en pantallas grandes-std */
     width: 30%;
     height: 70%;
-    gap: 96px;
+    gap: 26px;
     padding-bottom: 72px;
     /* permitir que el article use el comportamiento por defecto del CSS base (no forzamos izquierda) */
     left: initial;
@@ -280,7 +280,7 @@ body {
   .introductionMain img {
     /* imagen algo mayor pero controlada */
     height: 300px;
-    left: 40%;
+    left: 38%;
     transform: translate(-50%, -50%);
     top: 10%;
   }
