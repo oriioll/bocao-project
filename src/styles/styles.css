@@ -98,7 +98,7 @@ body {
 /*INTRODUCTION FILE*/
 .introductionBody {
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
   text-align: center;
   background: linear-gradient(
     180deg,
@@ -138,7 +138,6 @@ body {
   align-items: center;
   gap: 65px;
   padding: 20px;
-  padding-bottom: 75px;
 }
 
 .introductionMain h1 {
@@ -150,14 +149,13 @@ body {
 }
 
 .introductionMain div strong {
-  font-weight: 600;
+  font-weight: 800;
   color: black;
 }
 
-.introductionMain img {
+#introductionImage {
   z-index: 10;
   height: 550px;
-  width: auto;
   position: absolute;
   top: 20px;
   object-fit: contain;
@@ -172,6 +170,7 @@ body {
   font-weight: bold;
   background-color: var(--bg-red);
   border: none;
+  margin-top: 20px;
   border-radius: 20px;
   box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
@@ -207,25 +206,36 @@ body {
   .introductionMain h1 {
     font-size: 2rem;
   }
-  .introductionMain img {
+  #introductionImage {
     z-index: 10;
-    height: 450px;
+    height: 400px;
     width: auto;
     position: absolute;
-    top: 80px;
-    object-fit: contain;
+    top: 30px;
     transform: rotate(-10deg);
+    object-fit: cover;
   }
   .introductionMain .text {
     font-size: 1rem;
   }
+
   .introductionMain article {
     width: 90%;
     height: 50%;
-    align-items: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
   }
   .introductionFooter {
     gap: 50%;
+  }
+  .introductionBody {
+    width: 100%;
+    height: 100dvh;
+    box-sizing: border-box;
   }
 }
 
@@ -247,9 +257,9 @@ body {
 
   .introductionMain img {
     /* hacer la imagen proporcionalmente más pequeña para que no cubra el card */
-    height: 420px;
+    height: 320px;
     top: 30%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
   }
 }
@@ -270,8 +280,8 @@ body {
   .introductionMain img {
     /* imagen algo mayor pero controlada */
     height: 300px;
-      left: 50%;
-  transform: translate(-50%, -50%);
-    top: 30%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    top: 10%;
   }
 }
