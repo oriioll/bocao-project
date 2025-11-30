@@ -2,80 +2,276 @@
 * IMPORT CUSTOM FONT
 */
 @font-face {
-  font-family: ChunkFive; 
-  src: url(../assets/fonts/Chunkfive.woff); 
+  font-family: ChunkFive;
+  src: url(../assets/fonts/Chunkfive.woff);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --title-font: ChunkFive, sans-serif;
-    --font-primary: Inter, sans-serif;
-    --bg-red: #F02020;
-    --darker-red: #C01817;
-    --text-white: #F7F0EA;
-    --text-yellow: #FEB101;
-    --text-black: #1B1815;
+  --title-font: ChunkFive, sans-serif;
+  --font-primary: Inter, sans-serif;
+  --bg-red: #f02020;
+  --darker-red: #c01817;
+  --bg-darkest-red: #861212;
+  --text-white: #f7f0ea;
+  --text-yellow: #feb101;
+  --text-black: #1b1815;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    width: 100%;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /*LANDING HERO*/
 .firstLandingHero {
-    height: 100%;
-    width: 100%;
-    background-color: var(--bg-red);
-    font-family: var(--title-font);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-red);
+  font-family: var(--title-font);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .firstLandingHero h1 {
-    color: var(--text-white);
-    font-size: 8rem;
-    letter-spacing: 10px;
+  color: var(--text-white);
+  font-size: 8rem;
+  letter-spacing: 10px;
+  text-align: center;
 }
 .firstLandingHero h2 {
-    color: var(--text-yellow);
-    font-size: 2rem;
-    letter-spacing: 3px;
+  color: var(--text-yellow);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-align: center;
 }
 
 .firstLandingHero p {
-    color: var(--text-black);
-    font-family: var(--font-primary);
-    font-weight: 500;
-    margin-top: 20px;
-    animation: parpadeo 1.5s infinite ease;
+  color: var(--text-black);
+  font-family: var(--font-primary);
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+  animation: parpadeo 1.5s infinite ease;
 }
 /*ANIMACION PARPADEO PARA TEXTO DE CONTINUAR*/
 @keyframes parpadeo {
-    0% {
-        opacity: .6;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.02);
-    }
-    100% {
-        opacity: .6;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+/*MEDIA QUERIES PARA MOVIL PRIMERA PAGINA*/
+@media (max-width: 800px) {
+  .firstLandingHero h1 {
+    font-size: 4rem;
+    letter-spacing: 10px;
+  }
+  .firstLandingHero h2 {
+    font-size: 0.95rem;
+    letter-spacing: 3px;
+  }
 }
 
+/*INTRODUCTION FILE*/
+.introductionBody {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--bg-red) 0%,
+    var(--darker-red) 50%,
+    var(--bg-darkest-red) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.introductionMain {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  font-family: var(--title-font);
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.introductionMain article {
+  position: absolute;
+  z-index: 1;
+  width: 30%;
+  height: 70%;
+  color: var(--text-black);
+  text-align: center;
+  background-color: var(--text-yellow);
+  border-radius: 350px 350px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 65px;
+  padding: 20px;
+  padding-bottom: 75px;
+}
+
+.introductionMain h1 {
+  font-size: 3rem;
+}
+.introductionMain div {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+}
+
+.introductionMain div strong {
+  font-weight: 600;
+  color: black;
+}
+
+.introductionMain img {
+  z-index: 10;
+  height: 550px;
+  width: auto;
+  position: absolute;
+  top: 20px;
+  object-fit: contain;
+  transform: rotate(-10deg);
+}
+.introductionMain button {
+  display: none;
+  font-size: 16px;
+  padding: 14px 100px;
+  color: var(--text-white);
+  font-family: var(--font-primary);
+  font-weight: bold;
+  background-color: var(--bg-red);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 4px 10px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.introductionMain button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.introductionFooter {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+}
+
+.introductionFooter > svg {
+  background-color: var(--text-yellow);
+  border-radius: 50%;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.introductionFooter > svg:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*MEDIA QUERIES PARA MOVIL SEGUNDA PAGINA*/
+@media (max-width: 800px) {
+  .introductionMain h1 {
+    font-size: 2rem;
+  }
+  .introductionMain img {
+    z-index: 10;
+    height: 450px;
+    width: auto;
+    position: absolute;
+    top: 80px;
+    object-fit: contain;
+    transform: rotate(-10deg);
+  }
+  .introductionMain .text {
+    font-size: 1rem;
+  }
+  .introductionMain article {
+    width: 90%;
+    height: 50%;
+    align-items: space-around;
+  }
+  .introductionFooter {
+    gap: 50%;
+  }
+}
+
+/* --- ADICIONALES PARA RESOLUCIONES INTERMEDIAS (solo media queries) --- */
+/* arreglos para ventanas redimensionadas y tablets (entre móvil y desktop) */
+@media (min-width: 801px) and (max-width: 1200px) {
+  .introductionMain article {
+    /* aumentar ligeramente el ancho en pantallas medianas para que no quede demasiado estrecho */
+    width: 48%;
+    height: 68%;
+    gap: 72px;
+    padding-bottom: 60px;
+    /* centrar el article en pantallas intermedias para que no quede pegado al lado */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    top: 65%;
+  }
+
+  .introductionMain img {
+    /* hacer la imagen proporcionalmente más pequeña para que no cubra el card */
+    height: 420px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* puntos de quiebre más grandes pero no ultra-ancho */
+@media (min-width: 1201px) and (max-width: 1600px) {
+  .introductionMain article {
+    /* mantener el artículo razonablemente ancho en pantallas grandes-std */
+    width: 30%;
+    height: 70%;
+    gap: 96px;
+    padding-bottom: 72px;
+    /* permitir que el article use el comportamiento por defecto del CSS base (no forzamos izquierda) */
+    left: initial;
+    transform: none;
+  }
+
+  .introductionMain img {
+    /* imagen algo mayor pero controlada */
+    height: 300px;
+      left: 50%;
+  transform: translate(-50%, -50%);
+    top: 30%;
+  }
+}

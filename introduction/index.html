@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOCAO - Bienvenido a BOCAO</title>
-    <link rel="stylesheet" href="src/styles/styles.css">
-    <script src="src/scripts/script.js" defer></script>
+    <link rel="stylesheet" href="../src/styles/styles.css">
+    <script src="../src/scripts/introduction.js" defer></script>
 </head>
-<body>
+
+<body class="introductionBody">
+    <main class="introductionMain">
+        <img id="introductionImage" src="../src/assets/img/burger-intro.png" alt="Imagen Hamburguesa">
+        <article>
+            <h1 id="introductionh1">BIENVENIDO <br>A BOCAO</h1>
+            <div class="text">
+                <p id="introductionFirstP">Aquí encuentras bocaos como tienen que ser:</p>
+                <p><strong id="introductionBoldP">auténticos, calientes y listos para hacerte el día.</strong></p>
+            </div>
+            <button id="introductionComenzar" class="introductionComenzar">Comenzar</button>
+        </article>
+    </main>
+    <footer class="introductionFooter">
+        <div class="dots">
+            <svg id="introductionDot1" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="#feb101"
+                stroke="#FEB101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-point">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+            </svg>
+            <svg id="introductionDot2" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="#FEB101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-point">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+            </svg>
+            <svg id="introductionDot3" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                stroke="#FEB101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-point">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+            </svg>
+        </div>
+        <svg id="introductionContinueButton" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+            <path fill="#1B1815" d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2l10 10z" />
+        </svg>
+    </footer>
     
 </body>
+
 </html>
