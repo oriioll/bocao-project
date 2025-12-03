@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOCAO - Inicia tu sesión</title>
+    <link rel="stylesheet" href="../src/styles/styles.css">
+    <script src="../src/scripts/auth.js" defer></script>
+</head>
+<body class="loginBody"">
+    <header class="loginHeader">
+        <div class="textPwd">
+            <p>Recupera tu contraseña</p>
+        </div>
+    </header>
+    <main class="loginMain">
+        <div class="loginFormText">
+            <h1>Código de verificación</h1>
+            <p>Ingresa el código de 4 dígitos que fué enviado</p>
+            <form class="pwdForm">
+                <div class="inputs">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                </div>
+                <div class="pwdCta">
+                    <p>¿No recibiste el codigo?</p>
+                    <p class="loginError" id="loginError">Usuario o contraseña incorrecto</p>
+                    <a href="../forgotPassword/index.html">Reenviar código</a>
+                    <button id="loginBtn" class="loginBtn">Verificar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>

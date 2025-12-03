@@ -492,3 +492,61 @@ body {
     font-size: 0.75rem;
   }
 }
+
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px ;
+}
+.inputs input {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  outline: none;
+  border: solid 3px black;
+}
+
+.inputs input:focus {
+  border: solid 3px var(--text-yellow);
+}
+
+/* Quitar flechas en Chrome, Safari, Edge */
+.inputs input[type=number]::-webkit-inner-spin-button,
+.inputs input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Quitar flechas en Firefox */
+.inputs input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.textPwd p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.pwdCta {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pwdCta a {
+  text-decoration: none;
+  color: var(--text-black);
+  font-weight: bold;
+}
+
+.pwdCta button {
+  width: 100%;
+}
