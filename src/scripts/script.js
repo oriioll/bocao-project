@@ -5,7 +5,7 @@ if(firstLanding) {
     window.location.href = "introduction/index.html";
   });
 }
- 
+
 
   setTimeout(() => {
     window.location.href = "introduction/index.html";
