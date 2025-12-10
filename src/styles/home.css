@@ -1,30 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"); /*
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
 * IMPORT CUSTOM FONT
 */
 @font-face {
-  font-family: ChunkFive;
-  src: url(../assets/fonts/Chunkfive.woff);
+    font-family: ChunkFive;
+    src: url(../assets/fonts/Chunkfive.woff);
 }
 
 :root {
-  --title-font: ChunkFive, sans-serif;
-  --font-primary: "Montserrat", sans-serif;
-  --font-secondary: "Inter", sans-serif;
-  --bg-red: #f02020;
-  --darker-red: #c01817;
-  --bg-darkest-red: #861212;
-  --text-white: #f7f0ea;
-  --text-yellow: #feb101;
-  --text-black: #1b1815;
+    --title-font: ChunkFive, sans-serif;
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --bg-red: #f02020;
+    --darker-red: #c01817;
+    --bg-darkest-red: #861212;
+    --text-white: #f7f0ea;
+    --text-yellow: #feb101;
+    --text-black: #1b1815;
 }
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: var(--text-white);
     font-size: 16px;
     font-family: var(--font-secondary);
@@ -34,6 +38,7 @@ body {
     align-items: center;
     gap: 20px;
 }
+
 header {
     background: black;
     color: var(--text-white);
@@ -45,13 +50,16 @@ header {
     align-items: center;
     gap: 15px;
     border-radius: 0 0 50px 50px;
+    padding: 10px;
 }
+
 header .direction {
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
 }
+
 main {
     height: 75%;
     width: 100%;
@@ -59,11 +67,13 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
+
 main section {
     width: 80%;
 }
+
 section .search {
     display: flex;
     background-color: black;
@@ -72,6 +82,7 @@ section .search {
     width: 100%;
     gap: 10px
 }
+
 section .search input {
     width: 100%;
     background-color: transparent;
@@ -82,6 +93,7 @@ section .search input {
     padding-left: 10px;
     font-family: var(--font-secondary);
 }
+
 .offerBanner {
     background-color: black;
     color: var(--text-white);
@@ -90,18 +102,19 @@ section .search input {
     justify-content: center;
     border-radius: 50px;
     height: 30%;
-    
 }
+
 .offerBanner .image {
     width: 50%;
     height: 100%;
     background: var(--darker-red);
-    border-top-left-radius: 120px; 
+    border-top-left-radius: 120px;
     border-bottom-left-radius: 2px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
 
 }
+
 .offerBanner .offerText {
     width: 50%;
     height: 100%;
@@ -121,39 +134,77 @@ section .search input {
     color: var(--text-yellow);
     font-size: 4rem;
 }
+
 .offerText h4 {
     font-size: 1rem;
 }
+
 .offerText p {
     font-size: .8rem;
 }
 
 .offerText button {
-  width: 20%;
-  padding: 7px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: none;
-  background-color: var(--text-yellow);
-  font-weight: bold;
-  font-family: var(--font-secondary);
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+    width: 30%;
+    padding: 7px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--text-yellow);
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
+
 .offerText button:hover {
-  cursor: pointer;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-  transform: scale(1.025);
+    cursor: pointer;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.025);
 }
+
 .offerBanner img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     overflow: hidden;
 }
+
 footer {
     height: 10%;
     width: 100%;
     background-color: black;
 }
 
+@media (max-width: 768px) {
+    .offerText h3 {
+        color: var(--text-yellow);
+        font-size: 1rem;
+    }
+
+    .offerText h4 {
+        font-size: .4rem;
+    }
+
+    .offerText p {
+        font-size: .4rem;
+    }
+
+    .offerBanner .offerText {
+        padding-left: 20px;
+        gap: 10px;
+        border-radius: 25px;
+    }
+
+    .offerText button {
+        width: 70%;
+        padding: 3px;
+        font-size: .4rem;
+        border-radius: 10px;
+        border: none;
+    }
+
+    .offerBanner {
+        height: 20%;
+        gap: 0px;
+    }
+}
