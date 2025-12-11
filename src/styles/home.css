@@ -67,7 +67,7 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 main section {
@@ -169,6 +169,35 @@ section .search input {
     overflow: hidden;
 }
 
+.categories {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 20%;
+    gap: 10px;
+}
+
+.categoriesCarrousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+}
+
+.categoriesCarrousel img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.categoriesCarrousel img:hover {
+    transform: scale(1.1);
+}
+
 footer {
     height: 10%;
     width: 100%;
@@ -206,5 +235,10 @@ footer {
     .offerBanner {
         height: 20%;
         gap: 0px;
+    }
+
+    .categoriesCarrousel img {
+        width: 80px;
+        height: 80px;
     }
 }
