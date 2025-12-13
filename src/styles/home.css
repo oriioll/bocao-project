@@ -27,7 +27,7 @@
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100dvh;
     background-color: var(--text-white);
     font-size: 16px;
@@ -35,8 +35,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
     align-items: center;
-    gap: 20px;
 }
 
 header {
@@ -62,16 +62,17 @@ header .direction {
 
 main {
     height: 75%;
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
+    padding: 20px 10px;
 }
 
 main section {
-    width: 80%;
+    width: 100%;
 }
 
 section .search {
@@ -174,7 +175,7 @@ section .search input {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    height: 20%;
+    height: 15%;
     gap: 10px;
 }
 
@@ -187,8 +188,8 @@ section .search input {
 }
 
 .categoriesCarrousel img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     border-radius: 50%;
     transition: all .3s ease;
@@ -196,6 +197,74 @@ section .search input {
 
 .categoriesCarrousel img:hover {
     transform: scale(1.1);
+}
+
+section.popular {
+    width: 100%;
+    height: 35%;
+}
+
+.popularCarrousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+}
+
+.popularCarrousel article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 15%;
+    height: 80%;
+    gap: 5px;
+    background-color: black;
+    color: var(--text-white);
+    border-radius: 110px 110px 15px 15px;
+    flex-shrink: 0;
+
+}
+
+article img {
+    width: auto;
+    height: 100px;
+    object-fit: cover;
+    align-self: center;
+}
+
+article h3 {
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: .8rem;
+}
+
+article p {
+    padding-left: 10px;
+    padding-right: 15px;
+    font-size: .5rem;
+}
+
+article button {
+    align-self: center;
+    padding: 4px 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--text-yellow);
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+article button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.025);
 }
 
 footer {
@@ -226,8 +295,8 @@ footer {
 
     .offerText button {
         width: 70%;
-        padding: 3px;
-        font-size: .4rem;
+        padding: 6px;
+        font-size: .7rem;
         border-radius: 10px;
         border: none;
     }
@@ -238,7 +307,34 @@ footer {
     }
 
     .categoriesCarrousel img {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    article img {
+        width: auto;
+        height: 70px;
+    }
+
+    article button {
+        padding: 2px 20px;
+        align-self: center;
+    }
+
+    section.popular {
+        width: 100%;
+        height: 40%;
+    }
+
+    .popularCarrousel article {
+        width: 40%;
+    }
+
+    .popularCarrousel {
+        gap: 5px;
     }
 }
