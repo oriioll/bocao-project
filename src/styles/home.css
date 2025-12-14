@@ -291,6 +291,23 @@ footer {
     height: 10%;
     width: 100%;
     background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .shoppingCart {
+    border-radius: 50%;
+    padding: 6px;
+    background-color: var(--text-yellow);
+}
+/*Selector para todos los hijos del footer*/
+footer > * {
+    transition: all .3s ease;
+}
+footer > *:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
