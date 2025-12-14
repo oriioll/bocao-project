@@ -232,7 +232,7 @@ section.popular {
 
 article img {
     width: auto;
-    height: 100px;
+    height: 90px;
     object-fit: cover;
     align-self: center;
 }
@@ -265,6 +265,26 @@ article button:hover {
     cursor: pointer;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
     transform: scale(1.025);
+}
+article .popularSvg{
+    background-color: var(--text-white);
+    padding: 2.5px;
+    border-radius: 20px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.popularSvg p {
+    font-weight: bold;
+    font-size: .7rem;
+}
+.icons {
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
 }
 
 footer {
@@ -332,9 +352,11 @@ footer {
 
     .popularCarrousel article {
         width: 40%;
+        justify-content: space-around;
     }
 
     .popularCarrousel {
         gap: 5px;
+        justify-content: flex-start;
     }
 }
