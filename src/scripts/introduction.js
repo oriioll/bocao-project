@@ -26,7 +26,7 @@ function changeDots() {
     img.setAttribute("src", "../src/assets/img/bebida-intro.png");
     img.style.height = "450px";
   } else if (counter === 4) {
-    window.location.href = "../login/index.html";
+    window.location.href = "../login";
   }
 }
 
@@ -37,5 +37,5 @@ function changeDots() {
 
   const introToLogin = document.getElementById("introductionComenzar");
   introToLogin.addEventListener("click", () => {
-    window.location.href = "../login/index.html";
+    window.location.href = "../login";
   });

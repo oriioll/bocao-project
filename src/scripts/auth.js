@@ -27,7 +27,7 @@ if(window.location.href.includes('login')) {
 
         if((loginEmail.value == email || loginEmail.value == username) && loginPwd.value == password) {
             console.log('login succesfull')
-            window.location.href = "../home/index.html";
+            window.location.href = "../home";
             loginErrorMsg.style.display = "none";
         } else {
             console.log(username, email, password)
@@ -57,7 +57,7 @@ if(window.location.href.includes('register')) {
             localStorage.setItem("username", registerUser.value);
             localStorage.setItem("email", registerEmail.value);
             localStorage.setItem("password", registerPwd.value);
-            window.location.href = "../login/index.html";
+            window.location.href = "../login";
         } 
 })
 }

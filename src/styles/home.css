@@ -227,7 +227,7 @@ section.popular {
     color: var(--text-white);
     border-radius: 110px 110px 15px 15px;
     flex-shrink: 0;
-
+    cursor: pointer;
 }
 
 article img {
@@ -375,5 +375,10 @@ footer > *:hover {
     .popularCarrousel {
         gap: 5px;
         justify-content: flex-start;
+    }
+
+    footer svg {
+        height: 30px;
+        width: 30px;
     }
 }
