@@ -13,11 +13,11 @@ const burgers = [
     extras: [
       {
         name: "Queso",
-        precio: 1.99,
+        price: 1.99,
       },
       {
         name: "Pepinillos",
-        precio: 2.99,
+        price: 2.99,
       },
     ],
   },
@@ -30,11 +30,11 @@ const burgers = [
     extras: [
       {
         name: "Spicy Mayo",
-        precio: 0.99,
+        price: 0.99,
       },
       {
         name: "Bacon",
-        precio: 3.99,
+        price: 3.99,
       },
     ],
   },
@@ -47,11 +47,11 @@ const burgers = [
     extras: [
       {
         name: "Lechuga",
-        precio: 0.99,
+        price: 0.99,
       },
       {
         name: "Queso",
-        precio: 1.99,
+        price: 1.99,
       },
     ],
   },
@@ -64,11 +64,11 @@ const burgers = [
     extras: [
       {
         name: "Cebolla caramelizada",
-        precio: 3.99,
+        price: 3.99,
       },
       {
         name: "Crema Lotus ®",
-        precio: 5.99,
+        price: 5.99,
       },
     ],
   },
@@ -87,11 +87,11 @@ if (window.location.href.includes("home")) {
   document.getElementById("greetUser").innerText = user;
 
   //Get all menu SVGs and when they are cliked, change page to that one
-  var homeSvg = document.getElementById("homeSvg");
-  var favSvg = document.getElementById("favSvg");
-  var shoppingCartSvg = document.getElementById("shoppingCartSvg");
-  var menuSvg = document.getElementById("menuSvg");
-  var profileSvg = document.getElementById("profileSvg");
+  let homeSvg = document.getElementById("homeSvg");
+  let favSvg = document.getElementById("favSvg");
+  let shoppingCartSvg = document.getElementById("shoppingCartSvg");
+  let menuSvg = document.getElementById("menuSvg");
+  let profileSvg = document.getElementById("profileSvg");
 
   homeSvg.addEventListener("click", () => {
     window.location.href = "../home";
@@ -125,8 +125,42 @@ if (window.location.href.includes("home")) {
             pPrice = product.price;
             pStars = product.stars;
             pExtras = product.extras;
+
+            // SAVE ALL IN LOCALSTORAGE
+            localStorage.setItem("selectedProduct", JSON.stringify({
+                id: pId,
+                name: pName,
+                desc: pDesc,
+                price: pPrice,
+                stars: pStars,
+                extras: pExtras,
+              })
+            );
           }
         });
+        window.location.href = "../product";
       }
     });
+}
+
+//ONLY IF YOU ARE ON THE PRODUCT PAGE
+if (window.location.href.includes("product")) {
+  const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+  let LSId    = selectedProduct.id;
+  let LSName  = selectedProduct.name;
+  let LSDesc  = selectedProduct.desc;
+  let LSPrice = selectedProduct.price;
+  let LSStars = selectedProduct.stars;
+  let LSExtras = selectedProduct.extras;
+
+  document.getElementById('stars').textContent = LSStars;
+  document.getElementById('productName').textContent = LSName;
+  document.getElementById('productDesc').textContent = LSDesc;
+  document.getElementById('price').textContent = LSPrice + "€";
+  document.getElementById('extra1Name').textContent = LSExtras[0].name;
+  document.getElementById('extra2Name').textContent = LSExtras[1].name;
+  document.getElementById('extra1price').textContent = LSExtras[0].price + "€";
+  document.getElementById('extra2price').textContent = LSExtras[1].price + "€";
+
+
 }
