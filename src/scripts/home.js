@@ -110,7 +110,9 @@ if (window.location.href.includes("home")) {
   });
 
   //PRODUCT DISPLAY
-  document.querySelector(".popularCarrousel").addEventListener("click", function (event) {
+  document
+    .querySelector(".popularCarrousel")
+    .addEventListener("click", function (event) {
       const clickedArticle = event.target.closest("article");
       if (clickedArticle) {
         const productId = clickedArticle.id;
@@ -127,7 +129,9 @@ if (window.location.href.includes("home")) {
             pExtras = product.extras;
 
             // SAVE ALL IN LOCALSTORAGE
-            localStorage.setItem("selectedProduct", JSON.stringify({
+            localStorage.setItem(
+              "selectedProduct",
+              JSON.stringify({
                 id: pId,
                 name: pName,
                 desc: pDesc,
@@ -146,21 +150,43 @@ if (window.location.href.includes("home")) {
 //ONLY IF YOU ARE ON THE PRODUCT PAGE
 if (window.location.href.includes("product")) {
   const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
-  let LSId    = selectedProduct.id;
-  let LSName  = selectedProduct.name;
-  let LSDesc  = selectedProduct.desc;
+  let LSId = selectedProduct.id;
+  let LSName = selectedProduct.name;
+  let LSDesc = selectedProduct.desc;
   let LSPrice = selectedProduct.price;
   let LSStars = selectedProduct.stars;
   let LSExtras = selectedProduct.extras;
+  const extraInput1 = document.getElementById("input1");
+  const extraInput2 = document.getElementById("input2");
+  let newPrice = LSPrice;
 
-  document.getElementById('stars').textContent = LSStars;
-  document.getElementById('productName').textContent = LSName;
-  document.getElementById('productDesc').textContent = LSDesc;
-  document.getElementById('price').textContent = LSPrice + "€";
-  document.getElementById('extra1Name').textContent = LSExtras[0].name;
-  document.getElementById('extra2Name').textContent = LSExtras[1].name;
-  document.getElementById('extra1price').textContent = LSExtras[0].price + "€";
-  document.getElementById('extra2price').textContent = LSExtras[1].price + "€";
+  const updatePrice = ()=> {
+    newPrice = LSPrice;
+    if(extraInput1.checked) {
+      newPrice = newPrice + LSExtras[0].price;
+    }
+    if(extraInput2.checked) {
+      newPrice = newPrice + LSExtras[1].price;
+    }
+    document.getElementById("price").textContent = newPrice + "€";
+  }
+  //CHANGE EVENT FOR INPUTS
+  extraInput1.addEventListener("change", updatePrice);
+  extraInput2.addEventListener("change", updatePrice);
 
 
+  document.getElementById("stars").textContent = LSStars;
+  document.getElementById("productName").textContent = LSName;
+  document.getElementById("productDesc").textContent = LSDesc;
+  document.getElementById("extra1Name").textContent = LSExtras[0].name;
+  document.getElementById("extra2Name").textContent = LSExtras[1].name;
+  document.getElementById("price").textContent = newPrice + "€";
+  document.getElementById("extra1price").textContent = LSExtras[0].price + "€";
+  document.getElementById("extra2price").textContent = LSExtras[1].price + "€";
+
+
+  //TODO: BUTTON ADD TO CART
+  document.getElementById('addToCart').addEventListener('click', () => {
+    window.location.href = "../home";
+  })
 }
