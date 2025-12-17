@@ -339,7 +339,7 @@ PROFILE PAGE
 
 .userInfo #greetUser {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .userInfo #greetMail {
@@ -472,5 +472,17 @@ header.profileHeader {
 
     .profileMain a {
         width: 80%;
+    }
+    .userInfo #greetUser {
+    font-weight: bold;
+    font-size: 1rem;
+    }
+
+    .userInfo #greetMail {
+        font-size: .7rem;
+    }
+
+    .profileMain a {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.055);
     }
 }
