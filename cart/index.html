@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bocao - Inicio</title>
+    <link rel="stylesheet" href="../src/styles/cart.css">
+    <script src="../src/scripts/cart.js" type="module" defer></script>
+    <link rel="icon" href="../src/assets/img/favicon.png">
+</head>
+
+<body>
+    <header>
+        <a href="../home"> <- Volver</a>
+        <div class="title">
+            <h2>Mi carrito</h2>
+            <p>¿No olvidas nada?</p>
+         </div>
+    </header>
+    <main>
+        <section id="products" class="products">
+            <!--SHOPPING CART ITEMS INSERTED WITH JS-->
+        </section>
+        <div class="coupon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                <path fill="black" stroke="#FEB101" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 5v2m0 4v2m0 4v2M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4V7a2 2 0 0 1 2-2"/>
+            </svg>
+            <p>Aplicar cupón</p>
+        </div>
+        <section class="address">
+            <div class="mainAddressText">
+                <h3>Datos de entrega</h3>
+                <p>Mi casa</p>
+            </div>
+            <div class="addressText">
+                <p>C/ Fra B. Gran</p>
+                <p id="greetUser"></p>
+                <p>683498534</p>
+            </div>
+            <p>20min</p>
+        </section>
+    </main>
+    <footer>
+        <section class="priceInfo">
+            <div class="productPrice">
+                <p>Productos</p>
+                <p id="totalProductPrice"></p>
+            </div>
+            <div class="shipping">
+                <p>Envio a domicilio</p>
+                <p id="shippingPrice"></p>
+            </div>
+            <hr>
+            <div class="totalPriceText">
+                <p>A pagar</p>
+                <p id="totalPrice"></p>
+            </div>
+        </section>
+        <button>Confirmar</button>
+
+    </footer>
+
+</body>
+
+</html>

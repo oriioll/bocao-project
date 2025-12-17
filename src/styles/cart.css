@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+* IMPORT CUSTOM FONT
+*/
+@font-face {
+    font-family: ChunkFive;
+    src: url(../assets/fonts/Chunkfive.woff);
+}
+
+:root {
+    --title-font: ChunkFive, sans-serif;
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --bg-red: #f02020;
+    --darker-red: #c01817;
+    --bg-darkest-red: #861212;
+    --text-white: #f7f0ea;
+    --text-yellow: #feb101;
+    --text-black: #1b1815;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100dvh;
+    background-color: #FFFAF4;
+    font-size: 16px;
+    font-family: var(--font-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+}
+
+header {
+    height: 15%;
+    width: 30%;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+header p {
+    font-size: .8rem;
+}
+
+header a {
+    color: var(--text-black);
+    text-decoration: none;
+    transition: all .3s ease-out;    
+
+}
+
+header a:hover {
+    color: var(--text-yellow);
+    cursor: pointer;
+}
+
+main {
+    height: 60%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    overflow-y: scroll;
+    gap: 20px;
+}
+
+/*SCROLLBAR CON WEBKIT*/
+/* Tamaño de la barra */
+main::-webkit-scrollbar {
+  width: 12px; /* ancho de la barra vertical */
+}
+
+/* El "track" (fondo de la barra) */
+main::-webkit-scrollbar-track {
+  background: transparent; /* quita lo blanco por defecto */
+}
+
+/* El "thumb" (la parte que se mueve) */
+main::-webkit-scrollbar-thumb {
+  background-color: var(--text-yellow); /* color FBF3E8 con opacidad */
+  border-radius: 6px; /* esquinas redondeadas */
+}
+
+/* Opcional: quitar flechas (botones de scroll) */
+main::-webkit-scrollbar-button {
+  display: none;
+}
+/*SCROLLBAR FIREFOX*/
+main {
+  scrollbar-width: thin; /* más fina */
+  scrollbar-color: var(--text-yellow) transparent;
+}
+
+
+/*CART PRODUCTS*/
+.products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.products .cartProduct {
+    width: 100%;
+    background-color: #FBF3E8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.cartProduct .cartText {
+    display: flex;
+    flex-direction: column;
+} 
+
+.cartProduct .cartCounter {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: bold;
+}
+
+.cartCounter .countModifier {
+    background-color: var(--text-yellow);
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+.coupon {
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-yellow);
+    padding: 0px 7px;
+    border-radius: 10px;
+    transition: transform .3s ease-out;
+}
+.coupon:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.025);
+}
+/*ADDRESS SECTION*/
+.address {
+    height: 30%;
+    width: 100%;
+    background-color: #FBF3E8;
+    border: solid 2px gray;
+    border-radius: 10px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.mainAddressText {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mainAddressText p{
+    color: var(--text-white);
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 8px;
+    font-size: .9rem;
+}
+.addressText {
+    margin-left: 15px;
+    border-left: solid 1px var(--text-black);
+    padding-left: 5px;
+    font-size: .8rem;
+}
+.address > p{
+    color: rgb(78, 77, 77);
+}
+footer {
+    height: 25%;
+    width: 100%;
+    background-color: black;
+    color: var(--text-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+footer button {
+    width: 30%;
+    padding: 7px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--text-yellow);
+    font-weight: bold;
+    font-family: var(--font-secondary);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+footer .priceInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: var(--text-black);
+    width: 30%;
+    border-radius: 15px;
+    padding: 15px;
+}
+.productPrice, .shipping, .totalPriceText {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.totalPriceText #totalPrice {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+footer button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    transform: scale(1.025);
+}
+
+
+@media (max-width: 768px) {
+    footer .priceInfo {
+        width: 85%;
+    }
+
+    footer button {
+        width: 85%;
+    }
+
+    header{
+        width: 85%;
+    }
+    main {
+        width: 85%;
+    }
+
+    .cartProduct .cartText h2 {
+        font-size: 1.2rem;
+    } 
+    .cartProduct .cartText p {
+        font-size: .7rem;
+    }
+    .cartCounter .countModifier {
+        padding: 0 5px;
+    }
+
+    .coupon {
+        font-size: .7rem;
+    }
+    /*ADDRESS SECTION*/
+    .address {
+        padding: 10px 10px;
+    }
+    .address h3 {
+       font-size: 1.2rem;
+    }
+    .address p {
+        font-size: .7rem;
+    }
+    .mainAddressText {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .mainAddressText p{
+        color: var(--text-white);
+        background-color: black;
+        padding: 5px 15px;
+        border-radius: 8px;
+        font-size: .9rem;
+    }
+    .addressText {
+        margin-left: 15px;
+        border-left: solid 1px var(--text-black);
+        padding-left: 5px;
+        font-size: .8rem;
+    }
+}

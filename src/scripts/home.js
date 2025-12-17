@@ -172,8 +172,6 @@ if (window.location.href.includes("product")) {
   document.getElementById("extra1price").textContent = LSExtras[0].price + "€";
   document.getElementById("extra2price").textContent = LSExtras[1].price + "€";
 
-
-  //TODO: BUTTON ADD TO CART
   document.getElementById('addToCart').addEventListener('click', () => {
     //assing final price to the global price to manage cart
     finalPrice = newPrice;
@@ -192,12 +190,14 @@ if (window.location.href.includes("product")) {
 }
 
 
-//ONLY IF PROFILE WINDOWS
+//ONLY IF PROFILE PAGE
 if (window.location.href.includes("profile")) {
   document.getElementById('greetUser').innerText = user;
   document.getElementById('greetMail').innerText = mail;
   footerLinks();
 }
+
+
 
 
 
@@ -249,3 +249,4 @@ function addToCart(name, extra1, extra2, price) {
     localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
     console.log("ASI ESTA EL CARRITO: ",shoppingCart);
 }
+
