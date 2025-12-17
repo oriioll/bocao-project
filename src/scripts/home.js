@@ -1,6 +1,6 @@
 //Import username from login and register pages and show it
-import { user } from "./auth.js";
-console.log(user);
+import { user, mail } from "./auth.js";
+console.log(user, mail);
 
 //JS OBJECT FOR THE BURGERS
 const burgers = [
@@ -86,33 +86,10 @@ let pExtras = [];
 if (window.location.href.includes("home")) {
   document.getElementById("greetUser").innerText = user;
 
-  //Get all menu SVGs and when they are cliked, change page to that one
-  let homeSvg = document.getElementById("homeSvg");
-  let favSvg = document.getElementById("favSvg");
-  let shoppingCartSvg = document.getElementById("shoppingCartSvg");
-  let menuSvg = document.getElementById("menuSvg");
-  let profileSvg = document.getElementById("profileSvg");
-
-  homeSvg.addEventListener("click", () => {
-    window.location.href = "../home";
-  });
-
-  favSvg.addEventListener("click", () => {
-    window.location.href = "../favs";
-  });
-
-  shoppingCartSvg.addEventListener("click", () => {
-    window.location.href = "../cart";
-  });
-
-  profileSvg.addEventListener("click", () => {
-    window.location.href = "../profile";
-  });
+  footerLinks();
 
   //PRODUCT DISPLAY
-  document
-    .querySelector(".popularCarrousel")
-    .addEventListener("click", function (event) {
+  document.querySelector(".popularCarrousel").addEventListener("click", function (event) {
       const clickedArticle = event.target.closest("article");
       if (clickedArticle) {
         const productId = clickedArticle.id;
@@ -189,4 +166,41 @@ if (window.location.href.includes("product")) {
   document.getElementById('addToCart').addEventListener('click', () => {
     window.location.href = "../home";
   })
+}
+
+
+//ONLY IF PROFILE WINDOWS
+if (window.location.href.includes("profile")) {
+  document.getElementById('greetUser').innerText = user;
+  document.getElementById('greetMail').innerText = mail;
+  footerLinks();
+}
+
+
+
+
+function footerLinks() {
+    //Get all menu SVGs and when they are cliked, change page to that one
+  let homeSvg = document.getElementById("homeSvg");
+  let favSvg = document.getElementById("favSvg");
+  let shoppingCartSvg = document.getElementById("shoppingCartSvg");
+  let menuSvg = document.getElementById("menuSvg");
+  let profileSvg = document.getElementById("profileSvg");
+
+  homeSvg.addEventListener("click", () => {
+    window.location.href = "../home";
+  });
+
+  favSvg.addEventListener("click", () => {
+    window.location.href = "../favs";
+  });
+
+  shoppingCartSvg.addEventListener("click", () => {
+    window.location.href = "../cart";
+  });
+
+  profileSvg.addEventListener("click", () => {
+    window.location.href = "../profile";
+  });
+
 }

@@ -63,3 +63,4 @@ if(window.location.href.includes('register')) {
 }
 
 export const user = username;
+export const mail = email;
