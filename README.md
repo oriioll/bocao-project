@@ -1,7 +1,7 @@
 # 🍔 BOCAO Project
 
 **BOCAO** es una aplicación frontend de pedidos de comida a domicilio, con gestión de usuarios y carrito de la compra dinámico.  
-El diseño original fue creado por [@munuz.grafic](https://www.tiktok.com/@munoz.graphic), diseñador gráfico en TikTok, y este proyecto es una implementación en **HTML, CSS y JavaScript puro** basada en su propuesta visual.
+El diseño original fue creado por [@munoz.graphic](https://www.tiktok.com/@munoz.graphic), diseñador gráfico en TikTok, y este proyecto es una implementación en **HTML, CSS y JavaScript puro** basada en su propuesta visual.
 
 ---
 
